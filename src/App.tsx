@@ -1,8 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FormEvent, useState } from 'react';
+import { IRepository } from './IRepository'
+import { IUser } from './IUser'
+import RepositoryComponent from './RepositoryComponent';
+import UserComponent from './UserComponent';
 import './App.css';
 
+
 function App() {
+
+  const [reposFound, setReposFound] = useState<IRepository[]>([]);
+  const [repoSearch, setRepoSearch] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [user, setUser] = useState<IUser>();
+
   return (
     <div className="App">
       <h1>Github Lookup</h1>
