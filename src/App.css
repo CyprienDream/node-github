@@ -32,6 +32,10 @@ h1 {
   border: solid;
   border-color: grey;
   border-radius: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-title {
@@ -49,6 +53,9 @@ h1 {
   color: white;
 }
 
+.favourites p {
+  bottom: 0;
+}
 /* User */
 
 .user-picture-container {
