@@ -13,10 +13,25 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [user, setUser] = useState<IUser>();
 
+  const search = (event: FormEvent<HTMLFormElement>) => {
+    console.log("clicked search");
+
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const input = form.querySelector('#searchText') as HTMLInputElement;
+
+    setRepoSearch(input.value);
+    console.log("input value", input.value);
+
+
+    }
+  };
+
+
   return (
     <div className="App">
       <h1>Github Lookup</h1>
-      <form className="searchForm" >
+      <form className="searchForm" onSubmit={event => search(event)}>
         <input id="searchText" type="text" placeholder="GitHub username" />
         <button>Search</button>
       </form>
