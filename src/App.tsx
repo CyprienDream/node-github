@@ -20,7 +20,7 @@ function App() {
     return (
       <div>
         <UserComponent user={user as IUser}></UserComponent>
-        <div>
+        <div className="filter-repo">
           <input type="text" placeholder="Filter repositories..." onChange={event => { setSearchTerm(event.target.value) }} />
         </div>
       </div>
@@ -45,7 +45,7 @@ function App() {
           console.log("user", res);
         })
 
-      fetch(`https://api.github.com/users/${input.value}/repos`)
+      fetch(`https://api.github.com/users/${input.value}/repos?per_page=100`)
         .then(res => res.json())
         .then(res => {
           setReposFound(res);

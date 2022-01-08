@@ -10,6 +10,7 @@
 
 .main {
   flex: 1;
+  margin: 0% 20%;
 }
 
 h1 {
@@ -22,6 +23,7 @@ h1 {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 40px 0px;
 }
 
 
@@ -42,6 +44,10 @@ h1 {
 
 .card-title {
   font-size: 1.5vw;
+}
+
+.card-text {
+  padding: 0px 5px;
 }
 
 .card-link {
@@ -78,6 +84,10 @@ h1 {
 
 .languages-picture {
   max-width: 100%;
+}
+
+.filter-repo {
+  padding-top: 40px;
 }
 
 /* Navbar */
