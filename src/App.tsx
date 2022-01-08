@@ -61,7 +61,20 @@ function App() {
         <input id="searchText" type="text" placeholder="GitHub username" />
         <button>Search</button>
       </form>
-
+      {FoundInfo()}
+      <div className="repos-container">
+        {(reposFound.length || '') &&
+          reposFound.filter(val => {
+            if (searchTerm === '') {
+              return val
+            } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+              return val
+            }
+          })
+            .map(repo =>
+              (<RepositoryComponent key={repo.clone_url} repo={repo}></RepositoryComponent>))
+        }
+      </div>
     </div>
   );
 }
