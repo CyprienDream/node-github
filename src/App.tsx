@@ -21,7 +21,7 @@ function App() {
       <div>
         <UserComponent user={user as IUser}></UserComponent>
         <div>
-          <input type="text" placeholder="Search repositories..." onChange={event => { setSearchTerm(event.target.value) }} />
+          <input type="text" placeholder="Filter repositories..." onChange={event => { setSearchTerm(event.target.value) }} />
         </div>
       </div>
     )

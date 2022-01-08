@@ -12,8 +12,11 @@
   flex: 1;
 }
 
-/* Repos */
+h1 {
+  font-size: 3vw;
+}
 
+/* Repos */
 
 .repos-container {
   display: grid;
@@ -29,6 +32,11 @@
   height: 100%;
   border: solid;
   border-color: grey;
+  border-radius: 5%;
+}
+
+.card-title {
+  font-size: 1.5vw;
 }
 
 .card-link {
@@ -37,14 +45,16 @@
   color: #282c34;
 }
 
-/* User */
-
-.user-container {
-  margin: 10px;
+.card-body:hover {
+  background-color: black;
+  color: white;
 }
+
+/* User */
 
 .user-picture {
   border-radius: 50%;
+  max-width: 25%;
 }
 
 .user-link {
@@ -61,7 +71,7 @@
   line-height: 1.5;
   color: white;
   background-color: black;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
