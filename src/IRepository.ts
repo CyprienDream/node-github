@@ -3,4 +3,5 @@ export interface IRepository {
   clone_url: string
   watchers_count: number
   description: String
+  language: String
 }

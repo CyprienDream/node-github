@@ -30,7 +30,13 @@
 
 /* Users */
 
+.user-container {
+  margin: 10px;
+}
+
+.user-picture-container {
+}
+
 .user-picture {
   border-radius: 50%;
-  width: 50%;
 }

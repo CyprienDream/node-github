@@ -18,7 +18,6 @@ function App() {
     if (!reposFound.length && repoSearch.length > 0) return <p>No results for {repoSearch}.</p>;
     return (
       <div>
-        <p>Results for {repoSearch}...</p>
         <UserComponent user={user as IUser}></UserComponent>
       </div>
     )
