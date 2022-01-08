@@ -13,6 +13,17 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [user, setUser] = useState<IUser>();
 
+  const FoundInfo = () => {
+    if (!repoSearch.length && !reposFound.length) return <p>Enter a GitHub username</p>;
+    if (!reposFound.length && repoSearch.length > 0) return <p>No results for {repoSearch}.</p>;
+    return (
+      <div>
+        <p>Results for {repoSearch}...</p>
+        <UserComponent user={user as IUser}></UserComponent>
+      </div>
+    )
+  }
+
   const search = (event: FormEvent<HTMLFormElement>) => {
     console.log("clicked search");
 
