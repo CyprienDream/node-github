@@ -32,7 +32,7 @@ function App() {
 
     event.preventDefault();
     const form = event.target as HTMLFormElement;
-    const input = form.querySelector('#searchText') as HTMLInputElement;
+    const input = form.querySelector('#search-text') as HTMLInputElement;
 
     setRepoSearch(input.value);
     console.log("input value", input.value);
@@ -60,12 +60,10 @@ function App() {
     <div className="App">
       <div className="navbar">
         <h1>Github Lookup</h1>
-        <div>
-          <form className="searchForm" onSubmit={event => search(event)}>
-            <input id="searchText" type="text" placeholder="GitHub username" />
-            <button className="search-button">Search</button>
-          </form>
-        </div>
+        <form className="search-form" onSubmit={event => search(event)}>
+          <input id="search-text" type="text" placeholder="GitHub username" />
+          <button className="search-button">Search</button>
+        </form>
       </div>
       <div className="main">
         {FoundInfo()}

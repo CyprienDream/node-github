@@ -13,7 +13,8 @@ const RepositoryComponent = (props: { repo: IRepository }) => {
           </div>
 
           <div className="favourites">
-            <p>{repo.language} - {repo.watchers_count} <i className="fas fa-star"></i></p>
+            <p>{repo.language} - {repo.watchers_count}</p>
+            <i className="fas fa-star"></i>
           </div>
         </div>
       </a>

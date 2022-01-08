@@ -10,7 +10,7 @@ const UserComponent = (props: { user: IUser }) => {
       <div className="user-info">
         <a href={"https://github.com/" + user.login} target="_bla" className="user-link">{user.name}</a>
         <p>{user.bio}</p>
-        <p><img src={"https://github-readme-stats.vercel.app/api/top-langs?username=" + user.login + "&show_icons=true&locale=en&layout=compact"} alt="" /></p>
+        <p><img className="languages-picture" src={"https://github-readme-stats.vercel.app/api/top-langs?username=" + user.login + "&show_icons=true&locale=en&layout=compact"} alt="" /></p>
         <p>Public repos : {user.public_repos}</p>
       </div>
     </div>
