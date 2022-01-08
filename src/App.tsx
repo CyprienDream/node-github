@@ -3,6 +3,7 @@ import { IRepository } from './IRepository'
 import { IUser } from './IUser'
 import RepositoryComponent from './RepositoryComponent';
 import UserComponent from './UserComponent';
+import FooterComponent from './FooterComponent';
 import './App.css';
 
 
@@ -14,11 +15,14 @@ function App() {
   const [user, setUser] = useState<IUser>();
 
   const FoundInfo = () => {
-    if (!repoSearch.length && !reposFound.length) return <p>Enter a GitHub username</p>;
+    if (!repoSearch.length && !reposFound.length) return <p>Please enter a GitHub username</p>;
     if (!reposFound.length && repoSearch.length > 0) return <p>No results for {repoSearch}.</p>;
     return (
       <div>
         <UserComponent user={user as IUser}></UserComponent>
+        <div>
+          <input type="text" placeholder="Search repositories..." onChange={event => { setSearchTerm(event.target.value) }} />
+        </div>
       </div>
     )
   }
@@ -42,7 +46,6 @@ function App() {
         })
 
       fetch(`https://api.github.com/users/${input.value}/repos`)
-        // the JSON body is taken from the response
         .then(res => res.json())
         .then(res => {
           setReposFound(res);
@@ -55,15 +58,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Github Lookup</h1>
-      <form className="searchForm" onSubmit={event => search(event)}>
-        <input id="searchText" type="text" placeholder="GitHub username" />
-        <button>Search</button>
-      </form>
-      {FoundInfo()}
-      <div>
-        <input type="text" placeholder="Search repositories..." onChange={event => { setSearchTerm(event.target.value) }} />
+      <div className="navbar">
+        <h1>Github Lookup</h1>
+        <div>
+          <form className="searchForm" onSubmit={event => search(event)}>
+            <input id="searchText" type="text" placeholder="GitHub username" />
+            <button className="search-button">Search</button>
+          </form>
+        </div>
       </div>
+      {FoundInfo()}
       <div className="repos-container">
         {(reposFound.length || '') &&
           reposFound.filter(val => {
@@ -77,6 +81,7 @@ function App() {
               (<RepositoryComponent key={repo.clone_url} repo={repo}></RepositoryComponent>))
         }
       </div>
+      <FooterComponent></FooterComponent>
     </div>
   );
 }
