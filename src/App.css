@@ -21,7 +21,6 @@ h1 {
 .repos-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 40px;
 }
 
 .repo {
@@ -50,10 +49,11 @@ h1 {
   color: white;
 }
 
-.favourites {
-}
-
 /* User */
+
+.user-picture-container {
+  padding: 50px 0px;
+}
 
 .user-picture {
   border-radius: 50%;
