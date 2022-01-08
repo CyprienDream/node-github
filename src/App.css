@@ -3,6 +3,13 @@
 .App {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
 }
 
 /* Repos */
@@ -30,7 +37,7 @@
   color: #282c34;
 }
 
-/* Users */
+/* User */
 
 .user-container {
   margin: 10px;
@@ -56,10 +63,6 @@
   background-color: black;
   justify-content: space-around;
   align-items: center;
-}
-
-.searchForm {
-  border-radius: 40%;
 }
 
 .search-button {

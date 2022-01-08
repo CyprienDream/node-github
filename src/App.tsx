@@ -67,19 +67,20 @@ function App() {
           </form>
         </div>
       </div>
-      {FoundInfo()}
-      <div className="repos-container">
-        {(reposFound.length || '') &&
-          reposFound.filter(val => {
-            if (searchTerm === '') {
-              return val
-            } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-              return val
-            }
-          })
-            .map(repo =>
-              (<RepositoryComponent key={repo.clone_url} repo={repo}></RepositoryComponent>))
-        }
+      <div className="main">
+        {FoundInfo()}
+        <div className="repos-container">
+          {(reposFound.length || '') &&
+            reposFound.filter(val => {
+              if (searchTerm === '') {
+                return val
+              } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                return val
+              }
+            }).map(repo =>
+                (<RepositoryComponent key={repo.clone_url} repo={repo}></RepositoryComponent>))
+          }
+        </div>
       </div>
       <FooterComponent></FooterComponent>
     </div>
