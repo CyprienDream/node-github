@@ -23,7 +23,22 @@ function App() {
     setRepoSearch(input.value);
     console.log("input value", input.value);
 
+    if (input.value) {
+      fetch(`https://api.github.com/users/${input.value}`)
+        .then(res => res.json())
+        .then(res => {
+          setUser(res);
+          console.log("user", res);
+        })
 
+      fetch(`https://api.github.com/users/${input.value}/repos`)
+        // the JSON body is taken from the response
+        .then(res => res.json())
+        .then(res => {
+          setReposFound(res);
+          console.log("repos", res);
+        })
+      input.value = '';
     }
   };
 
