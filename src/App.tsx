@@ -62,6 +62,9 @@ function App() {
         <button>Search</button>
       </form>
       {FoundInfo()}
+      <div>
+        <input type="text" placeholder="Search repositories..." onChange={event => { setSearchTerm(event.target.value) }} />
+      </div>
       <div className="repos-container">
         {(reposFound.length || '') &&
           reposFound.filter(val => {
