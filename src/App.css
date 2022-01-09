@@ -118,12 +118,9 @@ h4, p {
   box-sizing: border-box;
   outline: solid #FFFFFF 0;
   padding: .5em;
-  width: 50%;
+  width: 64%;
   border-radius: 10px;
-}
-
-.search-text:focus {
-  border:solid 3px #191206;
+  border:solid 2px grey;
 }
 
 .search-button {
@@ -165,9 +162,8 @@ h4, p {
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
-  color: #D23333;
-}
+
+/* make grid responsive on mobile */
 
 @media only screen and (max-width: 768px) {
   .repos-container {
