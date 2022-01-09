@@ -19,12 +19,12 @@ const HeaderComponent = (props: { setReposFound: React.Dispatch<React.SetStateAc
 
     // retrieve form input element from the DOM
     const form = event.target as HTMLFormElement;
-    const input = form.querySelector('#search-text') as HTMLInputElement;
+    const input = form.querySelector('#username-search-text') as HTMLInputElement;
     setUsernameInput(input.value);
 
     // make requests to github api if the user provided an input
     if (input.value) {
-      //request for user data
+      //request for github user data
       fetch(`https://api.github.com/users/${input.value}`)
         .then(res => res.json())
         .then(res => {
@@ -43,12 +43,14 @@ const HeaderComponent = (props: { setReposFound: React.Dispatch<React.SetStateAc
   };
 
   return (
-    <div className="navbar">
+    <div className="header">
       <h1>Github Lookup</h1>
+      <div className="search-block">
       <form className="search-form" onSubmit={event => search(event, props.setReposFound, props.setUsernameInput, props.setUser)}>
-        <input id="search-text" type="search" placeholder="GitHub username" />
+          <input id="username-search-text" className="search-text" type="search" placeholder="GitHub username" />
         <button className="search-button">Search</button>
       </form>
+      </div>
     </div>
   )
 };

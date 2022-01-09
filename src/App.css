@@ -95,7 +95,7 @@ h4, p {
 
 /* Navbar */
 
-.navbar {
+.header {
   display: flex;
   line-height: 1.5;
   color: #FFFFFF;
@@ -104,20 +104,21 @@ h4, p {
   align-items: center;
 }
 
+.search-block {
+  display: flex;
+  flex-direction: column;
+}
+
 .search-form {
   padding: 10px;;
 }
 
 .search-text {
-  border: solid 3px #FFFFFF;
+  border: solid 1px #FFFFFF;
   box-sizing: border-box;
-  font-size: 2em;
-  height: 2em;
   outline: solid #FFFFFF 0;
   padding: .5em;
-  transition: all 2s ease-in;
-  width: 30vw;
-  z-index:1;
+  height: 11%;
 }
 
 .search-text:focus {
@@ -128,7 +129,8 @@ h4, p {
   color: #FFFFFF;
   background-color: #191206;
   border-radius: 10%;
-
+  margin: 0px 20px;
+  padding: 5px 5px;
 }
 
 .search-button:hover {

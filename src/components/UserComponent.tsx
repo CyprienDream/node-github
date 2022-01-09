@@ -7,9 +7,9 @@ const UserComponent = (props: { user: IUser }) => {
   return (
     <div>
       <div className="user-picture-container">
-        <img src={'' + user.avatar_url} alt="" className="user-picture" />
+        <img src={'' + user.avatar_url} alt="" className="user-picture"/>
       </div>
-      <div className="user-info">
+      <div>
         <a href={"https://github.com/" + user.login} target="_blank" rel="noreferrer" className="user-link">{user.name}</a>
         <p>{user.bio}</p>
         <p>Public repos : {user.public_repos}</p>
