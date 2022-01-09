@@ -1,4 +1,4 @@
-import { IRepository } from "../IRepository";
+import { IRepository } from "../interfaces/IRepository";
 
 const RepositoryComponent = (props: { repo: IRepository }) => {
   const { repo } = props;

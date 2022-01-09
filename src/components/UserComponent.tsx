@@ -1,4 +1,4 @@
-import { IUser } from "../IUser";
+import { IUser } from "../interfaces/IUser";
 
 const UserComponent = (props: { user: IUser }) => {
   const { user } = props;

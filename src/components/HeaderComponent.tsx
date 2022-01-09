@@ -1,41 +1,41 @@
 import React, { FormEvent } from 'react';
-import { IRepository } from '../IRepository'
-import { IUser } from '../IUser';
+import { IRepository } from '../interfaces/IRepository'
+import { IUser } from '../interfaces/IUser';
 
-
-const HeaderComponent = (props: { reposFound: IRepository[], setReposFound: React.Dispatch<React.SetStateAction<IRepository[]>>,
-                                  usernameInput: string, setUsernameInput: React.Dispatch<React.SetStateAction<string>>,
-                                  user: IUser | undefined, setUser: React.Dispatch<React.SetStateAction<IUser | undefined>> }) => {
-  // const { user } = props;
+// the setters are passed as pops to enable the search function
+const HeaderComponent = (props: { setReposFound: React.Dispatch<React.SetStateAction<IRepository[]>>,
+                                  setUsernameInput: React.Dispatch<React.SetStateAction<string>>,
+                                  setUser: React.Dispatch<React.SetStateAction<IUser | undefined>> }) => {
 
   const search = (event: FormEvent<HTMLFormElement>,
                   setReposFound: React.Dispatch<React.SetStateAction<IRepository[]>>,
                   setUsernameInput: React.Dispatch<React.SetStateAction<string>>,
                   setUser: React.Dispatch<React.SetStateAction<IUser | undefined>>) => {
 
-    console.log("clicked search");
-
+    // prevent page from refreshing
     event.preventDefault();
+
+    // retrieve form input element from the DOM
     const form = event.target as HTMLFormElement;
     const input = form.querySelector('#search-text') as HTMLInputElement;
-
     setUsernameInput(input.value);
-    console.log("input value", input.value);
 
+    // make requests to github api if the user provided an input
     if (input.value) {
+      //request for user data
       fetch(`https://api.github.com/users/${input.value}`)
         .then(res => res.json())
         .then(res => {
           setUser(res);
-          console.log("user", res);
         })
 
+      // request for repository data
       fetch(`https://api.github.com/users/${input.value}/repos?per_page=100`)
         .then(res => res.json())
         .then(res => {
           setReposFound(res);
-          console.log("repos", res);
         })
+      // removes previous input from search
       input.value = '';
     }
   };
