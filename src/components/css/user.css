@@ -1,0 +1,21 @@
+/* style for UserComponent.tsx */
+
+.user-picture-container {
+  padding: 50px 0px 15px 0px;
+}
+
+.user-picture {
+  border-radius: 50%;
+  max-width: 40%;
+}
+
+.user-link {
+  text-decoration: none;
+  color: #191206;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.languages-picture {
+  max-width: 100%;
+}

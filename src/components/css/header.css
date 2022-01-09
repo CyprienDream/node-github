@@ -1,0 +1,42 @@
+/* style for HeaderComponent.tsx */
+
+.header {
+  display: flex;
+  line-height: 1.5;
+  color: #FFFFFF;
+  background-color: #191206;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form {
+  padding: 10px;;
+}
+
+.search-text {
+  border: solid 1px #FFFFFF;
+  box-sizing: border-box;
+  outline: solid #FFFFFF 0;
+  padding: .5em;
+  width: 64%;
+  border-radius: 10px;
+  border:solid 2px grey;
+}
+
+.search-button {
+  color: #FFFFFF;
+  background-color: #191206;
+  border-radius: 10%;
+  margin: 0px 20px;
+  padding: 5px 5px;
+}
+
+.search-button:hover {
+  color:#000000;
+  background-color:#FFFFFF;
+}

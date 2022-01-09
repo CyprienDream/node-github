@@ -1,0 +1,31 @@
+/* style for RepositoryComponent.tsx */
+
+.repo {
+  padding: 10px;;
+}
+
+.card-body {
+  height: 100%;
+  border: solid;
+  border-color: grey;
+  border-radius: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-link {
+  right: 33%;
+  text-decoration: none;
+  color: #282c34;
+}
+
+.card-body:hover {
+  background-color:#191206;
+  color: #FFFFFF;
+}
+
+.favourites p {
+  bottom: 0;
+}

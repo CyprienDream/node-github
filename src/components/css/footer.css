@@ -1,0 +1,26 @@
+/* style for FooterComponent.tsx */
+
+.footer {
+  bottom: 0;
+  background: #191206;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  padding: 0px 50px;
+  color: #FFFFFF;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: #FFFFFF;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}

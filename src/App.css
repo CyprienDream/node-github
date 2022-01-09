@@ -1,4 +1,8 @@
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.css');
+@import 'components/css/footer.css';
+@import 'components/css/header.css';
+@import 'components/css/repository.css';
+@import 'components/css/user.css';
 
 /* Genneral */
 
@@ -23,8 +27,6 @@ h4, p {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* Repos */
-
 .repos-container {
   display: grid;
   grid-gap: 1rem;
@@ -32,135 +34,13 @@ h4, p {
   padding: 40px 0px;
 }
 
-
-.repo {
-  padding: 10px;;
-}
-
-.card-body {
-  height: 100%;
-  border: solid;
-  border-color: grey;
-  border-radius: 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.card-link {
-  right: 33%;
-  text-decoration: none;
-  color: #282c34;
-}
-
-.card-body:hover {
-  background-color:#191206;
-  color: #FFFFFF;
-}
-
-.favourites p {
-  bottom: 0;
-}
-/* User */
-
 .user-container {
   display: flex;
   flex-direction: column;
 }
 
-.user-picture-container {
-  padding: 50px 0px 15px 0px;
-}
-
-.user-picture {
-  border-radius: 50%;
-  max-width: 40%;
-}
-
-.user-link {
-  text-decoration: none;
-  color: #191206;
-  font-weight: bold;
-  font-size: larger;
-}
-
-.languages-picture {
-  max-width: 100%;
-}
-
 .filter-repo {
   padding-top: 40px;
-}
-
-/* Navbar */
-
-.header {
-  display: flex;
-  line-height: 1.5;
-  color: #FFFFFF;
-  background-color: #191206;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.search-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.search-form {
-  padding: 10px;;
-}
-
-.search-text {
-  border: solid 1px #FFFFFF;
-  box-sizing: border-box;
-  outline: solid #FFFFFF 0;
-  padding: .5em;
-  width: 64%;
-  border-radius: 10px;
-  border:solid 2px grey;
-}
-
-.search-button {
-  color: #FFFFFF;
-  background-color: #191206;
-  border-radius: 10%;
-  margin: 0px 20px;
-  padding: 5px 5px;
-}
-
-.search-button:hover {
-  color:#000000;
-  background-color:#FFFFFF;
-}
-
-/* Footer  */
-
-.footer {
-  bottom: 0;
-  background: #191206;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 100px;
-  padding: 0px 50px;
-  color: #FFFFFF;
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: #FFFFFF;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
 }
 
 /* make grid responsive on mobile */
