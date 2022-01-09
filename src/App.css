@@ -30,20 +30,6 @@ h3, p {
   padding: 40px 0px;
 }
 
-@media only screen and (max-width: 768px) {
-  .repos-container {
-    grid-template-columns: 47.5% 47.5%;
-    grid-column-gap: 5%;
-    grid-row-gap: 40px;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .repos-container {
-    grid-template-columns: 100%;
-    grid-column-gap: 5%;
-  }
-}
 
 .repo {
   padding: 10px;;
@@ -53,15 +39,11 @@ h3, p {
   height: 100%;
   border: solid;
   border-color: grey;
-  border-radius: 5%;
+  border-radius: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-}
-
-.card-title {
-  font-size: 1.5vw;
 }
 
 .card-link {
@@ -81,12 +63,12 @@ h3, p {
 /* User */
 
 .user-picture-container {
-  padding: 50px 0px;
+  padding: 50px 0px 15px 0px;
 }
 
 .user-picture {
   border-radius: 50%;
-  max-width: 25%;
+  max-width: 40%;
 }
 
 .user-link {
@@ -122,6 +104,7 @@ h3, p {
 .search-button {
   color: white;
   background-color: #191206;
+  border-radius: 10%;
 }
 
 .search-button:hover {
@@ -157,4 +140,19 @@ h3, p {
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+@media only screen and (max-width: 768px) {
+  .repos-container {
+    grid-template-columns: 47.5% 47.5%;
+    grid-column-gap: 5%;
+    grid-row-gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .repos-container {
+    grid-template-columns: 100%;
+    grid-column-gap: 5%;
+  }
 }

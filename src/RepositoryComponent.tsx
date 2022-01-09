@@ -8,7 +8,7 @@ const RepositoryComponent = (props: { repo: IRepository }) => {
       <a href={repo.clone_url} className="card-link" target="_blank" rel="noreferrer">
         <div className="card-body">
           <div className="repo-info">
-            <h3 className="card-title">{repo.name}</h3>
+            <h4 className="card-title">{repo.name}</h4>
             <p className="card-text">{repo.description}</p>
           </div>
 
