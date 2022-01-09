@@ -22,10 +22,17 @@ h1 {
 .repos-container {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 33% 34% 33%;
   padding: 40px 0px;
 }
 
+@media only screen and (max-width: 640px) {
+  .repos-container {
+    grid-template-columns: 47.5% 47.5%;
+    grid-column-gap: 5%;
+    grid-row-gap: 40px;
+  }
+}
 
 .repo {
   padding: 10px;;
@@ -57,7 +64,7 @@ h1 {
 }
 
 .card-body:hover {
-  background-color: black;
+  background-color:#191206;
   color: white;
 }
 
@@ -77,7 +84,7 @@ h1 {
 
 .user-link {
   text-decoration: none;
-  color: black;
+  color: #191206;
   font-weight: bold;
   font-size: larger;
 }
@@ -96,14 +103,14 @@ h1 {
   display: flex;
   line-height: 1.5;
   color: white;
-  background-color: black;
+  background-color: #191206;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .search-button {
   color: white;
-  background-color: black;
+  background-color: #191206;
 }
 
 .search-button:hover {
@@ -115,7 +122,7 @@ h1 {
 
 .footer {
   bottom: 0;
-  background: black;
+  background: #191206;
   display: flex;
   align-items: center;
   justify-content: space-around;
