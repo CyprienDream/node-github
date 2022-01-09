@@ -17,7 +17,7 @@ h1 {
   font-size: 3vw;
 }
 
-h3, p {
+h4, p {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -54,13 +54,18 @@ h3, p {
 
 .card-body:hover {
   background-color:#191206;
-  color: white;
+  color: #FFFFFF;
 }
 
 .favourites p {
   bottom: 0;
 }
 /* User */
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+}
 
 .user-picture-container {
   padding: 50px 0px 15px 0px;
@@ -91,7 +96,7 @@ h3, p {
 .navbar {
   display: flex;
   line-height: 1.5;
-  color: white;
+  color: #FFFFFF;
   background-color: #191206;
   justify-content: space-evenly;
   align-items: center;
@@ -101,10 +106,27 @@ h3, p {
   padding: 10px;;
 }
 
+.search-text {
+  border: solid 3px #FFFFFF;
+  box-sizing: border-box;
+  font-size: 2em;
+  height: 2em;
+  outline: solid #FFFFFF 0;
+  padding: .5em;
+  transition: all 2s ease-in;
+  width: 30vw;
+  z-index:1;
+}
+
+.search-text:focus {
+  border:solid 3px #191206;
+}
+
 .search-button {
-  color: white;
+  color: #FFFFFF;
   background-color: #191206;
   border-radius: 10%;
+
 }
 
 .search-button:hover {
@@ -122,14 +144,14 @@ h3, p {
   justify-content: space-around;
   height: 100px;
   padding: 0px 50px;
-  color: white;
+  color: #FFFFFF;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: white;
+  color: #FFFFFF;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;

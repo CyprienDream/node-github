@@ -3,7 +3,7 @@ import { IUser } from "./IUser";
 const UserComponent = (props: { user: IUser }) => {
   const { user } = props;
   return (
-    <div className="user-container">
+    <div>
       <div className="user-picture-container">
         <img src={'' + user.avatar_url} alt="" className="user-picture" />
       </div>

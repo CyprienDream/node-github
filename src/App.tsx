@@ -18,10 +18,10 @@ function App() {
     if (!repoSearch.length && !reposFound.length) return <p>Please enter a GitHub username</p>;
     if (!reposFound.length && repoSearch.length > 0) return <p>No results for {repoSearch}.</p>;
     return (
-      <div>
+      <div className="user-container">
         <UserComponent user={user as IUser}></UserComponent>
         <div className="filter-repo">
-          <input type="text" placeholder="Filter repositories..." className="filter-input" onChange={event => { setSearchTerm(event.target.value) }} />
+          <input type="text" placeholder="Filter repositories..." className="search-text" onChange={event => { setSearchTerm(event.target.value) }} />
         </div>
       </div>
     )
@@ -61,7 +61,7 @@ function App() {
       <div className="navbar">
         <h1>Github Lookup</h1>
         <form className="search-form" onSubmit={event => search(event)}>
-          <input id="search-text" type="text" placeholder="GitHub username" />
+          <input id="search-text" type="search" placeholder="GitHub username" />
           <button className="search-button">Search</button>
         </form>
       </div>
