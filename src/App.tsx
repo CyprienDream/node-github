@@ -1,27 +1,27 @@
 import React, { FormEvent, useState } from 'react';
 import { IRepository } from './IRepository'
 import { IUser } from './IUser'
-import RepositoryComponent from './RepositoryComponent';
-import UserComponent from './UserComponent';
-import FooterComponent from './FooterComponent';
+import RepositoryComponent from './components/RepositoryComponent';
+import UserComponent from './components/UserComponent';
+import FooterComponent from './components/FooterComponent';
 import './App.css';
 
 
 function App() {
 
   const [reposFound, setReposFound] = useState<IRepository[]>([]);
-  const [repoSearch, setRepoSearch] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [usernameInput, setUsernameInput] = useState('');
+  const [repositoryInput, setRepositoryInput] = useState('');
   const [user, setUser] = useState<IUser>();
 
-  const FoundInfo = () => {
-    if (!repoSearch.length && !reposFound.length) return <p>Please enter a GitHub username</p>;
-    if (!reposFound.length && repoSearch.length > 0) return <p>No results for {repoSearch}.</p>;
+  const foundInfo = () => {
+    if (!usernameInput.length && !reposFound.length) return <p>Please enter a GitHub username</p>;
+    if (!reposFound.length && usernameInput.length > 0) return <p>No results for {usernameInput}.</p>;
     return (
       <div className="user-container">
         <UserComponent user={user as IUser}></UserComponent>
         <div className="filter-repo">
-          <input type="text" placeholder="Filter repositories..." className="search-text" onChange={event => { setSearchTerm(event.target.value) }} />
+          <input type="text" placeholder="Filter repositories..." className="search-text" onChange={event => { setRepositoryInput(event.target.value) }} />
         </div>
       </div>
     )
@@ -34,7 +34,7 @@ function App() {
     const form = event.target as HTMLFormElement;
     const input = form.querySelector('#search-text') as HTMLInputElement;
 
-    setRepoSearch(input.value);
+    setUsernameInput(input.value);
     console.log("input value", input.value);
 
     if (input.value) {
@@ -66,13 +66,13 @@ function App() {
         </form>
       </div>
       <div className="main">
-        {FoundInfo()}
+        {foundInfo()}
         <div className="repos-container">
           {(reposFound.length || '') &&
             reposFound.filter(val => {
-              if (searchTerm === '') {
+              if (repositoryInput === '') {
                 return val
-              } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+              } else if (val.name.toLowerCase().includes(repositoryInput.toLowerCase())) {
                 return val
               }
             }).map(repo =>

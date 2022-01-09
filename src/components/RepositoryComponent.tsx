@@ -1,4 +1,4 @@
-import { IRepository } from "./IRepository";
+import { IRepository } from "../IRepository";
 
 const RepositoryComponent = (props: { repo: IRepository }) => {
   const { repo } = props;
@@ -7,11 +7,8 @@ const RepositoryComponent = (props: { repo: IRepository }) => {
     <div className="repo">
       <a href={repo.clone_url} className="card-link" target="_blank" rel="noreferrer">
         <div className="card-body">
-          <div className="repo-info">
-            <h4 className="card-title">{repo.name}</h4>
-            <p className="card-text">{repo.description}</p>
-          </div>
-
+          <h4>{repo.name}</h4>
+          <p className="card-text">{repo.description}</p>
           <div className="favourites">
             <p>{repo.language}</p>
             <p>{repo.watchers_count} <i className="fas fa-star"></i></p>
