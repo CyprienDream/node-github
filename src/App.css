@@ -118,7 +118,8 @@ h4, p {
   box-sizing: border-box;
   outline: solid #FFFFFF 0;
   padding: .5em;
-  height: 11%;
+  width: 50%;
+  border-radius: 10px;
 }
 
 .search-text:focus {
