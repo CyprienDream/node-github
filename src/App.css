@@ -30,11 +30,18 @@ h3, p {
   padding: 40px 0px;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
   .repos-container {
     grid-template-columns: 47.5% 47.5%;
     grid-column-gap: 5%;
     grid-row-gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .repos-container {
+    grid-template-columns: 100%;
+    grid-column-gap: 5%;
   }
 }
 
@@ -55,10 +62,6 @@ h3, p {
 
 .card-title {
   font-size: 1.5vw;
-}
-
-.card-text {
-  padding: 0px 5px;
 }
 
 .card-link {
