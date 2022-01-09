@@ -1,5 +1,7 @@
 import { IRepository } from "../interfaces/IRepository";
 
+// contains repositary name, description, language and number of watchers
+
 const RepositoryComponent = (props: { repo: IRepository }) => {
   const { repo } = props;
   return (

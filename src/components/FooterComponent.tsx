@@ -1,3 +1,4 @@
+// contains icons and links to my github and linkedin profiles
 
 const FooterComponent = () => {
   return (

@@ -1,5 +1,7 @@
 import { IUser } from "../interfaces/IUser";
 
+// contains user picture, description, username and link as well as number of public repos and language graph
+
 const UserComponent = (props: { user: IUser }) => {
   const { user } = props;
   return (

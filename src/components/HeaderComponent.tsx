@@ -2,6 +2,8 @@ import React, { FormEvent } from 'react';
 import { IRepository } from '../interfaces/IRepository'
 import { IUser } from '../interfaces/IUser';
 
+// contains the logo and the username search form
+
 // the setters are passed as pops to enable the search function
 const HeaderComponent = (props: { setReposFound: React.Dispatch<React.SetStateAction<IRepository[]>>,
                                   setUsernameInput: React.Dispatch<React.SetStateAction<string>>,
