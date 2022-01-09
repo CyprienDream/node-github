@@ -2,7 +2,6 @@
 
 .App {
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,7 +13,12 @@
 }
 
 h1 {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 3vw;
+}
+
+h3, p {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* Repos */
@@ -106,6 +110,10 @@ h1 {
   background-color: #191206;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.search-form {
+  padding: 10px;;
 }
 
 .search-button {
